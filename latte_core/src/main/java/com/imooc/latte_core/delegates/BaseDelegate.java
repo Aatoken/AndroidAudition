@@ -23,7 +23,7 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
 /**
  * Author Aatoken
  * Date 2019/4/12 17:06
- * Description
+ * Description 基类
  */
 public abstract class BaseDelegate extends Fragment implements ISupportFragment {
 
@@ -104,7 +104,7 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         DELEGATE.onSaveInstanceState(outState);
     }

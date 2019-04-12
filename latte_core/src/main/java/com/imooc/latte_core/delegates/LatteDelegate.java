@@ -3,7 +3,7 @@ package com.imooc.latte_core.delegates;
 /**
  * Author Aatoken
  * Date 2019/4/12 17:06
- * Description
+ * Description App内部调用的 fragment 的基类
  */
 public abstract class LatteDelegate extends PermissionCheckerDelegate {
 

@@ -2,6 +2,9 @@ package com.imooc.audition.application;
 
 import android.app.Application;
 
+import com.imooc.latte_core.app.Latte;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
+
 
 /**
  * Author Aatoken
@@ -9,4 +12,15 @@ import android.app.Application;
  * Description
  */
 public class ExampleApp extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        Latte.init()
+                .withContext(this)
+                .withIcon(new FontAwesomeModule())
+
+                .configure();
+    }
 }
