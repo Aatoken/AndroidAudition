@@ -12,6 +12,8 @@ import com.orhanobut.logger.Logger;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import okhttp3.Interceptor;
+
 /**
  * Author Aatoken
  * Date 2019/4/12 17:18
@@ -31,7 +33,10 @@ public class Configurator {
      * Icon 字体图标库
      */
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
-
+    /**
+     * 拦截器集合
+     */
+    private static final ArrayList<Interceptor> INTERCEPTORS=new ArrayList<>();
 
     /**
      * 进行初始化的操作
@@ -122,6 +127,31 @@ public class Configurator {
         putConfiguration(ConfigKeys.API_HOST.name(), host);
         return this;
     }
+
+
+    /**
+     * 添加拦截器
+     * @param interceptor 拦截器
+     * @return
+     */
+    public final Configurator withInterceptor(Interceptor interceptor) {
+        INTERCEPTORS.add(interceptor);
+        LATTE_CONFIGS.put(ConfigKeys.INTERCEPTOR.name(),INTERCEPTORS);
+        return this;
+    }
+
+
+    /**
+     * 添加拦截器
+     * @param interceptors 拦截器
+     * @return
+     */
+    public final Configurator withInterceptors(ArrayList<Interceptor> interceptors) {
+        INTERCEPTORS.addAll(interceptors);
+        LATTE_CONFIGS.put(ConfigKeys.INTERCEPTOR.name(),INTERCEPTORS);
+        return this;
+    }
+
 
     /**
      * 检查是否完成初始化避免空指针调用
