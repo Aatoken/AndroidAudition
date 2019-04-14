@@ -1,0 +1,17 @@
+1.AndroidX依赖库使用必须在 gradle.properties中添加 
+android.useAndroidX=true
+android.enableJetifier=true
+
+2.程序入口的配置项 核心库 下的app包
+调用接口 
+
+3.网络框架封装
+
+4.ui 网络加载显示加载的自定义控件
+
+5.util 的一些工具类 如：log,file,吐司，字符串为空判断
+
+6.fragment，activity，的基类实现
+
+7.实现接口回调
+
