@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.imooc.audition.R;
+import com.imooc.audition.test.LatteTest;
 import com.imooc.latte_core.delegates.LatteDelegate;
 import com.imooc.latte_core.net.RestClient;
 import com.imooc.latte_core.net.callback.IFailure;
@@ -29,41 +30,10 @@ public class ExampleDelegate extends LatteDelegate {
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
 
-        //test net
-        //testNet();
-
-        testCallBack();
-    }
-
-    private void testCallBack() {
-        CallbackManager.getInstance().addCallback(CallbackType.TEST, new IGlobalCallback() {
-            @Override
-            public void executeCallback(@Nullable Object args) {
-                LatteToast.showToast("连接成功！"+args);
-            }
-        });
-
-        CallbackManager.getInstance().getCallback(CallbackType.TEST).executeCallback("111");
-    }
-
-    private void testNet() {
-        RestClient.builder()
-                .url("index.php")
-                .loader(getContext())
-                .success(new ISuccess() {
-                    @Override
-                    public void onSuccess(String response) {
-                        LatteToast.showToast(response);
-                    }
-                })
-                .failure(new IFailure() {
-                    @Override
-                    public void onFailure() {
-                        LatteToast.showToast("失败");
-                    }
-                })
-                .build()
-                .get();
+        //测试网络
+        LatteTest.getInstance().testNet(getContext());
+        //接口回调
+        //LatteTest.getInstance().testCallBack();
     }
 
 
