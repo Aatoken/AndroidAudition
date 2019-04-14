@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.imooc.audition.R;
+import com.imooc.audition.delegates.bottom.EcBottomDelegate;
 import com.imooc.audition.test.LatteTest;
 import com.imooc.latte_core.delegates.LatteDelegate;
 import com.imooc.latte_core.net.RestClient;
@@ -31,9 +32,11 @@ public class ExampleDelegate extends LatteDelegate {
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
 
         //测试网络
-        LatteTest.getInstance().testNet(getContext());
+        //LatteTest.getInstance().testNet(getContext());
         //接口回调
         //LatteTest.getInstance().testCallBack();
+
+
     }
 
 

@@ -15,3 +15,11 @@ android.enableJetifier=true
 
 7.实现接口回调
 
+8.ActionBar的使用
+
+9.文件命名格式 activity_example_delegate
+
+10.ExampleApp 作为程序的入口，不能为private
+
+11.Bottom的代码 基类：东西比较多仔细看看 代码的格式可以学习
+

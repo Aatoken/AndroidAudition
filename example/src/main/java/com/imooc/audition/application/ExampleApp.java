@@ -11,7 +11,7 @@ import com.joanzapata.iconify.fonts.FontAwesomeModule;
 /**
  * Author Aatoken
  * Date 2019/4/12 16:55
- * Description
+ * Description 不能设置私有 程序的入口切记
  */
 public class ExampleApp extends Application {
 
@@ -27,4 +27,18 @@ public class ExampleApp extends Application {
                 .withInterceptor(new DebugInterceptor("test", R.raw.test))
                 .configure();
     }
+
+
+
+
+
+    private static class Holder {
+        private static final ExampleApp INSTANCE = new ExampleApp();
+    }
+
+    public static ExampleApp getInstance() {
+        return Holder.INSTANCE;
+    }
+
+
 }
