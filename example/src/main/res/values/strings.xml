@@ -1,10 +1,16 @@
 <resources>
     <string name="app_name">Audition</string>
+
+    <!--bottom-->
     <string name="layout_ecbottom_index">主页</string>
     <string name="layout_ecbottom_sort">分类</string>
     <string name="layout_ecbottom_discover">发现</string>
     <string name="layout_ecbottom_shop">购物车</string>
     <string name="layout_ecbottom_person">我的</string>
+
+    <!--glide-->
+    <string name="layout_glide_imageloader">加载图片</string>
+
 
 
 </resources>

@@ -17,7 +17,7 @@ import java.util.LinkedHashMap;
 /**
  * Author Aatoken
  * Date 2019/4/14 22:47
- * Description
+ * Description bottom的fragment
  */
 public class EcBottomDelegate extends BaseBottomDelegate {
 

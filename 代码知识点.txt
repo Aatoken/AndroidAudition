@@ -23,3 +23,5 @@ android.enableJetifier=true
 
 11.Bottom的代码 基类：东西比较多仔细看看 代码的格式可以学习
 
+12.代理服务器的使用 genymotion与笔记本上关闭掉
+

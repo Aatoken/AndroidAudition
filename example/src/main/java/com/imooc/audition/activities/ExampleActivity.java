@@ -1,9 +1,6 @@
 package com.imooc.audition.activities;
 
-
-
-import com.imooc.audition.delegates.ExampleDelegate;
-import com.imooc.audition.delegates.bottom.EcBottomDelegate;
+import com.imooc.audition.delegates.glide.GlideDelegate;
 import com.imooc.latte_core.activities.ProxyActivity;
 import com.imooc.latte_core.delegates.LatteDelegate;
 
@@ -15,7 +12,8 @@ import com.imooc.latte_core.delegates.LatteDelegate;
 public class ExampleActivity extends ProxyActivity {
     @Override
     public LatteDelegate setRootDelegate() {
-        return new EcBottomDelegate();
+        //return new EcBottomDelegate();
+        return new GlideDelegate();
     }
 
     @Override
