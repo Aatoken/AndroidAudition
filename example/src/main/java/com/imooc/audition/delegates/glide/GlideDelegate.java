@@ -28,11 +28,7 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
     private Button mBtn_img_loader = null;
     private ImageView mImgview_show = null;
 
-    //options
-    RequestOptions requestOptions = new RequestOptions()
-            .placeholder(new ColorDrawable(Color.BLACK))
-            .error(new ColorDrawable(Color.BLUE))
-            .fallback(new ColorDrawable(Color.RED));
+
 
 
     @Override
@@ -56,7 +52,7 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
             case R.id.img_loader:
 
                 String url = Latte.getApiHost()+"img.png";
-                Glide.with(this).load(url).apply(requestOptions).into(mImgview_show);
+                Glide.with(this).load(url).into(mImgview_show);
 
                 LatteLogger.w("GlideDelegate","点击图片加载");
                 break;
