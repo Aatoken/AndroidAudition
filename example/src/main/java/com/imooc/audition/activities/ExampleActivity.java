@@ -14,6 +14,7 @@ public class ExampleActivity extends ProxyActivity {
     public LatteDelegate setRootDelegate() {
         //return new EcBottomDelegate();
         return new GlideDelegate();
+
     }
 
     @Override

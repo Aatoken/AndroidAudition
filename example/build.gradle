@@ -27,4 +27,7 @@ dependencies {
     implementation project(':latte_core')
 
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+
+
 }

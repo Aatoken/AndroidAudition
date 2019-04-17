@@ -12,19 +12,15 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.FutureTarget;
-import com.bumptech.glide.request.Request;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.SizeReadyCallback;
 import com.bumptech.glide.request.target.Target;
-import com.bumptech.glide.request.transition.Transition;
 import com.imooc.audition.R;
 import com.imooc.latte_core.app.Latte;
 import com.imooc.latte_core.delegates.LatteDelegate;
@@ -46,10 +42,10 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
     private ImageView mImgview_show = null;
 
     //handler
-    private static Handler mHandler=new Handler(){
+    private static Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-           LatteToast.showToast(msg.obj+"");
+            LatteToast.showToast(msg.obj + "");
         }
     };
     RequestOptions options = new RequestOptions()
@@ -103,17 +99,16 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
 
     private void glideApp() {
         String url = Latte.getApiHost() + "img.png";
-         GlideApp.with(this)
-                 .load(url)
-                 .cacheSource()
-                 .into(mImgview_show);
+        GlideApp.with(this)
+                .load(url)
+                .cacheSource()
+                .into(mImgview_show);
     }
 
     /**
      * submit的使用
      */
-    private void submitTest()
-    {
+    private void submitTest() {
 
         //在子线程中执行
         new Thread(new Runnable() {
@@ -130,8 +125,8 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
                             .submit();
                     final File imageFile = target.get();
 
-                    Message message=new Message();
-                    message.obj=imageFile.getPath();
+                    Message message = new Message();
+                    message.obj = imageFile.getPath();
                     mHandler.sendMessage(message);
 
                 } catch (Exception e) {
@@ -145,8 +140,7 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
     /**
      * 基础方法使用
      */
-    private void test()
-    {
+    private void test() {
         String url = Latte.getApiHost() + "img.png";
         Glide.with(this)
                 .load(url)
@@ -166,7 +160,6 @@ public class GlideDelegate extends LatteDelegate implements View.OnClickListener
                 })
                 .into(mImgview_show);
     }
-
 
 
 }
