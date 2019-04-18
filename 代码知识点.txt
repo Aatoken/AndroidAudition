@@ -26,3 +26,7 @@ android.enableJetifier=true
 12.代理服务器的使用 genymotion与笔记本上关闭掉
 
 13.Glide的使用
+
+14.Kotlin的学习与gradle的学习
+
+15.photoview
